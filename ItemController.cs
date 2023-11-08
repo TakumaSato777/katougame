@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class ItemController : MonoBehaviour
 {
-    public float dropSpeed = -0.03f;
+    public float dropSpeed = -5.0f;
     public PlayerController script;//PlayerControllerクラスが入る
     int kusyamiClone;
 
     void Start()
     {
         script = GameObject.Find("Jun").GetComponent<PlayerController>();
-        dropSpeed = -0.03f;
+        dropSpeed = -5.0f;
     }
 
     void Update()
@@ -23,7 +23,9 @@ public class ItemController : MonoBehaviour
             Destroy(gameObject);
         }
 
-        transform.Translate(0, this.dropSpeed, 0);
+        // 時間単位で移動速度を調整
+        float moveDistance = dropSpeed * Time.deltaTime;
+        transform.Translate(0, moveDistance, 0);
         if (transform.position.y < -6.0f)
         {
             Destroy(gameObject);

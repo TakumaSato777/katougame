@@ -39,13 +39,13 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Tag=Kinniku");
             sound.PlayOneShot(kinniku2);
-            this.generator.GetComponent<ItemGenerator>().SetParameter(span -0.05f , speed);
+            this.generator.GetComponent<ItemGenerator>().SetParameter(span -0.2f , speed);
         }
         if (other.gameObject.tag == "Hana")//ハナちゃんと接触
         {
             Debug.Log("Tag=Hana");
             sound.PlayOneShot(hana2);
-            this.generator.GetComponent<ItemGenerator>().SetParameter(span - 0.01f, speed);
+            this.generator.GetComponent<ItemGenerator>().SetParameter(span - 0.1f, speed);
         }
         if (other.gameObject.tag == "Kusyami")//くしゃみ純一と接触
         {
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Tag=Kingdom");
             sound.PlayOneShot(kingdom2);
-            this.generator.GetComponent<ItemGenerator>().SetParameter(span - 0.05f, speed);
+            this.generator.GetComponent<ItemGenerator>().SetParameter(span - 0.2f, speed);
         }
         if (other.gameObject.tag == "Hanasora")//ハナソラと接触
         {
@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Tag=Ikiiki");
             sound.PlayOneShot(ikiiki2);
-            this.generator.GetComponent<ItemGenerator>().SetParameter(span - 0.05f, speed);
+            this.generator.GetComponent<ItemGenerator>().SetParameter(span - 0.2f, speed);
         }
 
         Destroy(other.gameObject);

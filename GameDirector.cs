@@ -33,27 +33,27 @@ public class GameDirector : MonoBehaviour
         }
         else if(count == 4 && this.time < 10)
         {
-            this.generator.GetComponent<ItemGenerator>().SetParameter(span - 0.15f, speed);
+            this.generator.GetComponent<ItemGenerator>().SetParameter(span - 0.15f, speed - 0.5f);
             count = 5;
         }
         else if (count == 3 && this.time < 20)
         {
-            this.generator.GetComponent<ItemGenerator>().SetParameter(span - 0.15f, speed);
+            this.generator.GetComponent<ItemGenerator>().SetParameter(span - 0.15f, speed - 0.5f);
             count = 4;
         }
         else if (count == 2 && this.time < 30)
         {
-            this.generator.GetComponent<ItemGenerator>().SetParameter(span-0.1f, speed);
+            this.generator.GetComponent<ItemGenerator>().SetParameter(span-0.1f, speed - 0.5f);
             count = 3;
         }
         else if (count == 1 && this.time < 40)
         {
-            this.generator.GetComponent<ItemGenerator>().SetParameter(span - 0.1f, speed);
+            this.generator.GetComponent<ItemGenerator>().SetParameter(span - 0.1f, speed - 0.5f);
             count = 2;
         }
         else if (count == 0 && this.time < 50)
         {
-            this.generator.GetComponent<ItemGenerator>().SetParameter(span - 0.1f, speed);
+            this.generator.GetComponent<ItemGenerator>().SetParameter(span - 0.1f, speed - 0.5f);
             count = 1;
         }
 
